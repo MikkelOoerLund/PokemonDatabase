@@ -1,0 +1,18 @@
+﻿{
+  "Id": 1,
+  "Name": "Pikachu",
+  "Level": 50,
+  "Statistic": {
+    "Hp": 35,
+    "Attack": 55,
+    "Defense": 40,
+    "SpecialAttack": 50,
+    "SpecialDefense": 50,
+    "Speed": 90
+  },
+  "TypeContainer": {
+    "PokemonTypeContainerId": 123,
+    "FirstPokemonType": "Electric",
+    "SecondPokemonType": "None"
+  }
+}
