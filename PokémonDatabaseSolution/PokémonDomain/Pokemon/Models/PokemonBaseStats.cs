@@ -1,14 +1,19 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace PokémonDomain
 {
-    public class PokemonBaseStatistic
+    public class PokemonBaseStats
     {
-        public int PokedexID { get; set; }
+        [Key]
+        public int PokedexId { get; set; }
 
         public int BaseHp { get; set; }
         public int BaseAttack { get; set; }
@@ -17,4 +22,5 @@ namespace PokémonDomain
         public int BaseSpecialDefense { get; set; }
         public int BaseSpeed { get; set; }
     }
+
 }

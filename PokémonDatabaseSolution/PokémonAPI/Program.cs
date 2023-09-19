@@ -6,8 +6,32 @@ namespace PokémonAPI
     class Program
     {
 
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
+
+            //var client = new PokemonApiClient();
+            //var pokemonApi = await client.GetPokemonWithId(1);
+            //var pokemon = new PokemonApiWrapper(pokemonApi);
+
+            //foreach (var stat in pokemon.GetBaseStatsByName())
+            //{
+            //    await Console.Out.WriteLineAsync($"Key: {stat.Key} Value: {stat.Value}");
+            //}
+
+
+
+            using (var context = new PokemonDbContext())
+            {
+                context.Database.EnsureCreated();
+                var speciesList = context.Species.ToList();
+                //foreach (var species in speciesList)
+                //{
+                //    Console.WriteLine($"ID: {species.PokedexID}, Name: {species.SpeciesName}");
+                //}
+
+                Console.WriteLine("Here");
+            }
+
             //var containerBuilder = new PokemonTypeContainerBuilder();
             //var factory = new PokemonTypeContainerFactory(containerBuilder);
 
